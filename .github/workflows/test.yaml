@@ -17,7 +17,9 @@ jobs:
       - name: read github repo
         uses: actions/checkout@v3
 
-      - name: execute commands to print variables
+      - name: Discover Environment
         run: |
+          echo $HOSTNAME
+          echo $USER
+          ls $HOME
           echo $GITHUB_WORKSPACE
-          echo $github
