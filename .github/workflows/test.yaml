@@ -1,5 +1,5 @@
-name: percobaan
-run-name: ini adalah percobaan
+name: COBA
+run-name: Read Environment Variables
 on:
   push:
     branches: [master]
@@ -14,12 +14,12 @@ jobs:
     # step represent a sequence of tasks that will be executed as part of job
     steps:
       # Checks-out repository under $GITHUB_WORKSPACE, so I can access it
-      - name: read github repo
+      - name: Checkout Repo
         uses: actions/checkout@v3
 
       - name: Discover Environment
         run: |
           echo $HOSTNAME
           echo $USER
-          ls $HOME
+          ls -al $HOME
           echo $GITHUB_WORKSPACE
