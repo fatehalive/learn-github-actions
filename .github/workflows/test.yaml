@@ -19,5 +19,5 @@ jobs:
 
       - name: execute commands to print variables
         run: |
-          echo ${{ GITHUB_WORKSPACE }}
-          echo ${{ github }}
+          echo GITHUB_WORKSPACE
+          echo github
