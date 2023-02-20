@@ -22,4 +22,8 @@ jobs:
           echo $HOSTNAME
           echo $USER
           ls -al $HOME
-          echo $GITHUB_WORKSPACE
+          ls -al $HOME/factory
+          ls -al $HOME/perflog
+          ls -al $HOME/runners
+          ls -al $HOME/warmup
+          ls -al $HOME/work
