@@ -28,9 +28,8 @@ jobs:
           ls -al $HOME/warmup
           ls -al $HOME/work
 
-jobs:
   scalar:
-    name: scalar_job_in_second_JOBS
+    name: scalar_job
     runs-on: ubuntu-latest
     steps:
       - name: Print Github Variable
