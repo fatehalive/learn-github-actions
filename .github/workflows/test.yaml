@@ -33,6 +33,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print Github Variable
-        run: ${{ github }}
-      - name: Print Github lowercase
-        run: echo $github    
+        run: echo $github
+      - name: Print Bashrc
+        run: cat $HOME/.bashrc    
