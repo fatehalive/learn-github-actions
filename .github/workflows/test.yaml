@@ -1,0 +1,22 @@
+name: percobaan
+run-name: ini adalah percobaan
+on:
+  push:
+    branches: [master]
+  
+# A workflow run is made up of one or more jobs that can run sequencially or in parallel
+jobs:
+  # This workflow contain a single job called build
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # step represent a sequence of tasks that will be executed as part of job
+    steps:
+      # Checks-out repository under $GITHUB_WORKSPACE, so I can access it
+      - name: read github repo
+        uses: actions/checkout
+
+      - name: execute commands to print variables
+        run: |
+          echo ${{ GITHUB }}
