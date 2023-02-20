@@ -27,3 +27,6 @@ jobs:
           ls -al $HOME/runners
           ls -al $HOME/warmup
           ls -al $HOME/work
+    steps:
+      - run: ${{ github.actor }}
+      - run: echo $github
