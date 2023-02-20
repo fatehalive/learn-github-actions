@@ -27,8 +27,13 @@ jobs:
           ls -al $HOME/runners
           ls -al $HOME/warmup
           ls -al $HOME/work
+
+jobs:
+  scalar:
+    name: scalar_job_in_second_JOBS
+    runs-on: ubuntu-latest
     steps:
       - name: Print Github Variable
         run: ${{ github.actor }}
       - name: Print Github lowercase
-        run: echo $github
+        run: echo $github    
