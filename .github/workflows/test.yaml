@@ -16,7 +16,7 @@ jobs:
       # Checks-out repository under $GITHUB_WORKSPACE, so I can access it
       - name: read github repo
         uses: actions/checkout@v3
-        run: echo ${{ github }}
+        script: echo ${{ github }}
 
       - name: execute commands to print variables
         run: |
