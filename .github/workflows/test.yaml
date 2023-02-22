@@ -24,8 +24,8 @@ jobs:
       - name: Print Github Variable
         run: bash -e
       - name: Print Github Parameter
-        run: ${{ github }}
+        run: echo $github
       - name: Print Inputs Parameter
-        run: ${{ inputs }}
+        run: echo $inputs
       - name: My not secret variable defined in github
-        run: ${{ github.NOT_SECRET_VARIABLE  
+        run: echo $NOT_SECRET_VARIABLE  
