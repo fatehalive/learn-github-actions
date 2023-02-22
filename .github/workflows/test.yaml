@@ -23,5 +23,9 @@ jobs:
     steps:
       - name: Print Github Variable
         run: bash -e
-      - name: Print Bashrc
-        run: cat $HOME/.bashrc    
+      - name: Print Github Parameter
+        run: ${{ github }}
+      - name: Print Inputs Parameter
+        run: ${{ inputs }}
+      - name: My not secret variable defined in github
+        run: ${{ github.NOT_SECRET_VARIABLE  
