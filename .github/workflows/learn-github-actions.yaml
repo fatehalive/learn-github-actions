@@ -11,9 +11,9 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
-jobs:
-  simple_log:
-    runs-on: self-hosted
-    steps:
-      - name: Who is?
-        run: ${{ github.actor }}
+      - name: Print Github Parameter
+        run: ${{ github }}
+      - name: Print Inputs Parameter
+        run: ${{ inputs }}
+      - name: My not secret variable defined in github
+        run: ${{ github.NOT_SECRET_VARIABLE }}
