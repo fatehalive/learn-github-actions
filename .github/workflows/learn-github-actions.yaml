@@ -3,7 +3,7 @@ run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
   check-bats-version:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
@@ -11,3 +11,9 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+jobs:
+  simple_log:
+    runs-on: self-hosted
+    steps:
+      - name: Who is?
+        run: ${{ github.actor }}
